@@ -37,7 +37,6 @@ public class WhileLoops {
         }
         return "There were "+pcount+" positive and "+ncount+" negative numbers.";
     }
-    public static void findMinAndMax()
     public static void main(String[] args){
         fromHereToThere(20,30);
         factors(12);
