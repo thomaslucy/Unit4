@@ -37,9 +37,30 @@ public class WhileLoops {
         }
         return "There were "+pcount+" positive and "+ncount+" negative numbers.";
     }
+    public static String findMinAndMax(){
+        int counter = 0;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        while (counter<5){
+            System.out.println("Number: ");
+            int num = scan.nextInt();
+            counter+=1;
+            if (num<min) {
+                min = num;
+            }
+            if (num>max) {
+                max = num;
+            }
+        }
+        return "Max value is: "+max+" \nMin value is: "+min;
+    }
+    public static Double GradePoint(){
+        
+    }
     public static void main(String[] args){
         fromHereToThere(20,30);
         factors(12);
         System.out.println(countPosandNeg());
+        System.out.println(findMinAndMax());
     }
 }
