@@ -55,12 +55,35 @@ public class WhileLoops {
         return "Max value is: "+max+" \nMin value is: "+min;
     }
     public static Double GradePoint(){
-        
+        int counter =  0;
+        double total = 0;
+        System.out.println("Enter seven letter grades (A, B, C, D, or F)");
+        while (counter < 7){
+            String grade = scan.next();
+            counter+=1;
+            if (grade.equals("A"))
+                total += 4.0;
+            else if (grade.equals("B"))
+                total += 3.0;
+            else if (grade.equals("C"))
+                total+= 2.0;
+            else if (grade.equals("D"))
+                total = 1.0;
+            else
+                total+= 0.0;
+        }
+        total/=7;
+        total*=100;
+        total=(int)(total+0.5);
+        total/= 100;
+        return total;
+
     }
     public static void main(String[] args){
         fromHereToThere(20,30);
         factors(12);
         System.out.println(countPosandNeg());
         System.out.println(findMinAndMax());
+        System.out.println("GPA = "+GradePoint());
     }
 }
