@@ -30,9 +30,27 @@ public class ForLoops {
         }
         return output;
     }
+    public static Integer sumNumbers(int a, int b){
+        int total = 0;
+        int big;
+        int small;
+        if (a > b){
+            big = a;
+            small = b;
+        }
+        else {
+            big = b;
+            small = a;
+        }
+        for (int counter = small; counter<= big; counter++){
+            total += counter;
+        }
+        return total;
+    }
     public static void main(String[] args){
         System.out.println(printingHashTags(7));
         System.out.println(countDown(0,10));
         System.out.println(countDown2(10,0));
+        System.out.println(sumNumbers(5,10));
     }
 }
