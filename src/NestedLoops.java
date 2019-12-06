@@ -43,9 +43,9 @@ public class NestedLoops {
     }
 
     public static void main(String[] args){
-        //System.out.println(xSquare());
-        //System.out.println(xSquare2(8));
-        //System.out.println(flippedTriangle(7));
+        System.out.println(xSquare());
+        System.out.println(xSquare2(8));
+        System.out.println(flippedTriangle(7));
         System.out.println(multiplicationTable());
     }
 }
