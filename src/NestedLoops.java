@@ -33,11 +33,12 @@ public class NestedLoops {
         String s = "";
         for (int x = 1; x <= 9; x++) {
             for (int y = 1; y <= 9; y++)
-                s += x*y + " ";
+                if ((x*y)>=10)
+                    s += " "+ x*y;
+            else
+                s +="  "+ x*y;
                 s += "\n";
         }
-        if (s.length()==1)
-            s += "  ";
         return s;
     }
 
