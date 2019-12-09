@@ -34,15 +34,31 @@ public class StringProblems {
     }
     public static String differentStrings(String s1, String s2){
         String output = "";
-        for (int counter = 0; s1.substring(counter,counter+1)!=s2.substring(counter,counter+1); counter ++){
-            output += s1.substring(counter,counter+1);
-        }
-        return output;
+        String t1 = s1;
+        String t2 = s2;
+        int counter = 0;
+        if (s1.equals(s2))
+            return s1+" and "+s2+" are the same.";
+        if (s1.length()>s2.length())
+            t2 += " ";
+        else
+            t1 += " ";
+        while (t1.substring(counter, counter +1).equals((t2.substring(counter, counter +1))))
+            counter++;
+        return s1+" and "+s2+" are not the same. They differ at "+(counter+1)+".";
+    }
+    public static boolean isPalindrome(String S){
+        String s = "";
+        String t = S.toLowerCase();
+        for (int i = S.length()-1; i >= 0; i--)
+            s += t.substring(i, i +1);
+        return t.equals(s);
     }
     public static void main(String[] args){
         System.out.println(printTheLetters("pizza"));
         System.out.println(everyOtherLetter("computer science"));
         System.out.println(countTheVowels("COMPUTER science"));
         System.out.println(differentStrings("tiger", "turtle"));
+        System.out.println(isPalindrome("radar"));
     }
 }
